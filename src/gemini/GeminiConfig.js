@@ -12,7 +12,7 @@ const geminiConfig = {
 };
  
 const geminiModel = googleAI.getGenerativeModel({
-  model: "gemini-1.5-flash-latest",
+  model: "gemini-1.5-pro",
   geminiConfig,
 });
  

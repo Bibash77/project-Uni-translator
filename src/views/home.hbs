@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Futuristic Translator</title>
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(145deg, #222831, #393e46);
+      color: #eeeeee;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #00adb5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2 {
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 50px 20px;
+      margin: 20px auto;
+      max-width: 1200px;
+      border-radius: 15px;
+      background: linear-gradient(145deg, #222831, #393e46);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    section h1, section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00adb5;
+    }
+
+    section p {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 18px;
+      color: #eeeeee;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      text-align: center;
+    }
+
+    .hero-section .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    /* Button Styles */
+    .dialog-button {
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #222831;
+      background-color: #00adb5;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .dialog-button:hover {
+      background-color: #00ffcb;
+      transform: scale(1.05);
+    }
+
+    /* Features Section */
+    .features-section ul {
+      margin: 20px auto 0;
+      padding: 0;
+      max-width: 800px;
+      list-style: none;
+    }
+
+    .features-section ul li {
+      font-size: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid #393e46;
+    }
+
+    /* Dashboard Section */
+    .dashboard-container {
+      text-align: center;
+    }
+
+    .dashboard-container .button-container {
+      margin-top: 30px;
+    }
+
+    /* Subscription Table */
+    .subscription-table {
+      width: 100%;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+
+    .subscription-table th, .subscription-table td {
+      border: 1px solid #00adb5;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .subscription-table th {
+      background-color: #393e46;
+      color: #00adb5;
+      font-weight: bold;
+    }
+
+    .subscription-table td {
+      background-color: #222831;
+      color: #eeeeee;
+    }
+
+    .subscription-table tr:hover {
+      background-color: #393e46;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <h1>Welcome to Robo Uni-Translator</h1>
+    <p>Translate your text accurately and efficiently, breaking language barriers around the world.</p>
+    <div class="button-container">
+      <a href="/signup" class="dialog-button">Sign Up</a>
+      <a href="/login" class="dialog-button">Log In</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features-section">
+    <h2>Why Choose Robo Uni Translator?</h2>
+    <p>Our advanced translation service offers fast, accurate, and reliable translations for over 100 languages. Whether you're a business, traveler, or student, we ensure you communicate effortlessly with anyone around the globe.</p>
+    <ul>
+      <li>Support for over 6 languages and Unicode</li>
+      <li>Accurate translations with contextual understanding</li>
+      <li>Real-time translations for conversations and texts</li>
+      <li>Available on desktop and mobile for seamless use</li>
+      <li>User-friendly interface with a clean, intuitive design</li>
+    </ul>
+  </section>
+
+  <!-- Dashboard Section -->
+  <section class="dashboard-container">
+    <h1>Your Translation Dashboard</h1>
+    <p>Track your translation history, access premium features, and manage your subscription all in one place.</p>
+    <div class="button-container">
+      <a href="/dashboard" class="dialog-button">Go to Dashboard</a>
+    </div>
+  </section>
+
+  <!-- Subscription Section -->
+  <section class="dashboard-container">
+    <h1>Subscription Plans</h1>
+    <p>Select the plan that best suits your needs. We offer flexible pricing options to meet the requirements of every user, from casual users to businesses with high-volume translation needs.</p>
+    <table class="subscription-table">
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Features</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Basic</td>
+          <td>Unlimited translations, 24/7 support</td>
+          <td>$5/month</td>
+        </tr>
+        <tr>
+          <td>Pro</td>
+          <td>All Basic features + Real-time conversation translations</td>
+          <td>$15/month</td>
+        </tr>
+        <tr>
+          <td>Business</td>
+          <td>All Pro features + Custom integrations and API access</td>
+          <td>$50/month</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+</body>
+</html>

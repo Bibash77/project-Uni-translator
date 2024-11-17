@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(145deg, #222831, #393e46);
+      color: #eeeeee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    a {
+      color: #00adb5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Form Container */
+    .form-container {
+      background: #393e46;
+      padding: 40px 30px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .form-container h1 {
+      font-size: 28px;
+      color: #00adb5;
+      margin-bottom: 20px;
+    }
+
+    .form-container p {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    /* Form Styling */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-size: 14px;
+      text-align: left;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input {
+      padding: 12px;
+      font-size: 16px;
+      border: 2px solid #00adb5;
+      border-radius: 8px;
+      background: #222831;
+      color: #eeeeee;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #00ffcb;
+      background: #1a1d23;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #eeeeee;
+      background: #00adb5;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #00ffcb;
+    }
+
+    /* Links Section */
+    .links-section {
+      margin-top: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    {{#if error}}
+      <p style="color: #ff5673; font-weight: bold;">{{error}}</p>
+    {{/if}}
+    <h1>Sign Up</h1>
+    <form action="/signup" method="POST">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+      
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Create a password" required />
+      
+      <button type="submit">Sign Up</button>
+    </form>
+    <div class="links-section">
+      Already have an account? <a href="/login">Log In</a>
+    </div>
+  </div>
+</body>
+</html>
