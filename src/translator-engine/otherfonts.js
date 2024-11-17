@@ -53,8 +53,8 @@ var all_rules = {
     for (var r = 0; r < myFont['post-rules'].length; r++) {
       output = output.replace(new RegExp(myFont['post-rules'][r][0], 'g'), myFont['post-rules'][r][1]);
     }
-  
-    // console.log(output);
+  setUnicodePreeti
+    console.log(output);
     field.value = field.value + output;  
     return false;
   }
@@ -67,6 +67,7 @@ var all_rules = {
   function setUnicodePreeti(text) {
     font = 'Preeti';
     font = font.toLowerCase();
+    setUnicode
     var myFont = all_rules[font];
     if (!myFont) {
       throw 'font not included in module';
@@ -80,6 +81,7 @@ var all_rules = {
     for (var r = 0; r < myFont['post-rules'].length; r++) {
       output = output.replace(new RegExp(myFont['post-rules'][r][0], 'g'), myFont['post-rules'][r][1]);
     }
-  
+    console.log(output);
+
     return output;
   }
