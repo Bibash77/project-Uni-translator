@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Translator App</title>
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(145deg, #222831, #393e46);
+      color: #eeeeee;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #00adb5;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h1, h2 {
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Dashboard Container */
+    .dashboard-container {
+      padding: 30px;
+      background: linear-gradient(145deg, #222831, #393e46);
+      border-radius: 15px;
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .dashboard-container h1, .dashboard-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00adb5;
+    }
+
+    .dashboard-container p {
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    /* Highlight for API Key */
+    code {
+      background: #393e46;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 16px;
+      color: #00adb5;
+    }
+
+    /* Subscription Table */
+    .subscription-table {
+      width: 100%;
+      margin: 20px 0;
+      border-collapse: collapse;
+    }
+
+    .subscription-table th, .subscription-table td {
+      border: 1px solid #00adb5;
+      padding: 15px;
+      text-align: center;
+      font-size: 16px;
+    }
+
+    .subscription-table th {
+      background-color: #393e46;
+      color: #00adb5;
+      font-weight: bold;
+    }
+
+    .subscription-table td {
+      background-color: #222831;
+      color: #eeeeee;
+    }
+
+    .subscription-table tr:hover {
+      background-color: #393e46;
+    }
+
+    /* Buttons */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .dialog-button {
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #222831;
+      background-color: #00adb5;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .dialog-button:hover {
+      background-color: #00ffcb;
+      transform: scale(1.05);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .dashboard-container {
+        padding: 20px;
+      }
+
+      .subscription-table th, .subscription-table td {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      .dialog-button {
+        padding: 12px 20px;
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="dashboard-container">
+    <h1>Welcome, {{email}}</h1>
+    <p>Your API Key: <code aria-label="Your API Key">{{apiKey}}</code></p>
+
+    <h2>Subscription Plans</h2>
+    <table class="subscription-table">
+      <thead>
+        <tr>
+          <th>Plan</th>
+          <th>Monthly Fee</th>
+          <th>Requests Included</th>
+          <th>Cost per Extra Request</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Free Plan</td>
+          <td>$0</td>
+          <td>50 requests</td>
+          <td>$0.01/request</td>
+        </tr>
+        <tr>
+          <td>Basic Plan</td>
+          <td>$1/month</td>
+          <td>250 requests</td>
+          <td>$0.005/request</td>
+        </tr>
+        <tr>
+          <td>Pro Plan</td>
+          <td>$5/month</td>
+          <td>1,500 requests</td>
+          <td>$0.004/request</td>
+        </tr>
+        <tr>
+          <td>Enterprise Plan</td>
+          <td>Custom Pricing</td>
+          <td>Unlimited requests</td>
+          <td>Custom Pricing</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="button-container">
+      <a href="/" class="dialog-button" aria-label="Back to Home">Back to Home</a>
+    </div>
+  </div>
+</body>
+</html>
