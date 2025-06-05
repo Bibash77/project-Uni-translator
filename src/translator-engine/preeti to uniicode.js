@@ -26,7 +26,7 @@ function convertToUnicode(legacyText) {
 
     // improve this since 10k is too high for older laptops to process
     const chunkSize = 10;
-
+    
     while (continueProcessing) {
         startPosition = endPosition;
         if (endPosition < totalLength - chunkSize) {

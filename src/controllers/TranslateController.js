@@ -45,6 +45,44 @@ exports.translateText = async (req, res) => {
 };
 
 
+exports.translateTextToUnicode = async (req, res) => {
+    const { selectedLanguage, data } = req.query;
+
+    if (!selectedLanguage || !data) {
+        return res.status(400).json({ error: 'Both selectedLanguage and data parameters are required' });
+    }
+
+    try {
+        // Call the unified translation function
+        const translatedText = await translateToUnicode(selectedLanguage, data);
+
+        // Send the translated text as the response
+        return res.status(200).json({ translatedText });
+    } catch (error) {
+        console.error("Error generating translation:", error);
+        return res.status(500).json({ error: 'Translation service error' });
+    }
+};
+
+exports.translateTextToPreeti = async (req, res) => {
+    const { selectedLanguage, data } = req.query;
+
+    if (!selectedLanguage || !data) {
+        return res.status(400).json({ error: 'Both selectedLanguage and data parameters are required' });
+    }
+
+    try {
+        // Call the unified translation function
+        const translatedText = await translateToPreeti(selectedLanguage, data);
+
+        // Send the translated text as the response
+        return res.status(200).json({ translatedText });
+    } catch (error) {
+        console.error("Error generating translation:", error);
+        return res.status(500).json({ error: 'Translation service error' });
+    }
+};
+
 const translateToUnicode = (text) => {
     // Logic for translating to Unicode will go here
     return `[Unicode] ${text}`;

@@ -39,10 +39,11 @@ exports.translateTextWithGemini = async(selectedLanguage, data) => {
         console.log(data)
         const prompt = `${data}. "Translate this to ${selectedLanguage}. Return translated text only.`;
         
-        console.log(prompt)
+        // console.log(prompt)
         // Call the Gemini model with the prompt
         const result = await geminiModel.generateContent(prompt);
         
+        console.log(result)
         // Extract and return the translated text
         return result.response.text();
     } catch (error) {

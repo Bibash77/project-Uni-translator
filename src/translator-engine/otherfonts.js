@@ -81,7 +81,7 @@ var all_rules = {
     for (var r = 0; r < myFont['post-rules'].length; r++) {
       output = output.replace(new RegExp(myFont['post-rules'][r][0], 'g'), myFont['post-rules'][r][1]);
     }
-    console.log(output);
+    console.log("----------------" , output);
 
     return output;
   }
